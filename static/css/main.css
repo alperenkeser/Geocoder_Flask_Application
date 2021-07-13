@@ -1,0 +1,46 @@
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+
+.content {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+table, td, th {
+    border: 1px solid gray;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#submit_button{
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color:white;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form {
+    display: inline-block;
+    margin-left: 25%;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#content {
+    width: 70%;
+}

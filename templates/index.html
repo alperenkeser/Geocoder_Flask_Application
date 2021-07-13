@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>MKAD distance finder</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Moscow Ring Road Distance Finder</h1>
+
+    <div class="form">
+        <form action="/" method="POST">
+            <input type="text" name="search_address" id="search_address">
+            <input type="submit" id="submit_button" value="search address">
+        </form>
+    </div>
+
+    {% if addresses|length < 1 %}
+    <h4 style="text-align: center">Search address and find distance to MKAD</h4>
+    {% else %}
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Address</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+            <th>Distance</th>
+        </tr>
+        {% for address in addresses %}
+            <tr>
+                <td>{{ address.date_created.date() }}</td>
+                <td>{{ address.name }}</td>
+                <td>{{ address.longitude }}</td>
+                <td>{{ address.latitude }}</td>
+                <td>{{ address.distance }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+
+
+</div>
+{% endblock %}
