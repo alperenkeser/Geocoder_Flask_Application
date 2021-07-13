@@ -11,7 +11,7 @@ The api I used to create this application is Yandex's geocoder api. The coordina
 pull down the source code from this Github repository:
 
 ```sh
-$ git clone ...
+$ git clone https://github.com/alperenkeser/Geocoder_Flask_Application
 ```
 
 Create a new virtual environment:
